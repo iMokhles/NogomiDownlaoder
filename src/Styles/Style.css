@@ -1,0 +1,39 @@
+
+.ios {
+
+    /* Main Navigation Bar */
+    --f7-navbar-bg-color: transparent;
+    --f7-navbar-border-color: transparent;
+    --f7-navbar-height: 60px;
+    --f7-navbar-tablet-height: 60px;
+    --f7-navbar-font-size: 17px;
+    --f7-navbar-link-color: #007AFF;
+
+    /* Main Search Bar */
+    --f7-searchbar-input-bg-color: transparent;
+    --f7-searchbar-bg-color: #fff;
+    --f7-searchbar-in-page-content-border-radius: 10px;
+    --f7-searchbar-border-color: transparent;
+    --f7-searchbar-in-page-content-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+
+    /* Main List */
+    --f7-list-border-color: transparent;
+    --f7-list-chevron-icon-color: transparent;
+    --f7-list-chevron-icon-area: 0px;
+    --f7-list-button-border-color: transparent;
+
+    /* Main List Item */
+    --f7-list-item-text-max-lines: 15;
+
+    /* Main Block */
+    --f7-block-strong-border-color: transparent;
+
+    /* Inputs */
+    --f7-label-font-size: 15px;
+    --f7-label-font-weight: bold;
+
+    /* Toolbar */
+    --f7-toolbar-top-shadow-image: none;
+    --f7-toolbar-border-color: transparent;
+    --f7-toolbar-bg-color: white;
+}

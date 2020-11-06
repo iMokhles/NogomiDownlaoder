@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>NogomiDownloader</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="node_modules/framework7/css/framework7.bundle.min.css">
+    <link rel="stylesheet" href="src/Styles/Style.css">
+</head>
+<body>
+<!-- App root element -->
+<div id="app">
+
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+
+            <!-- Scrollable page content -->
+            <div class="page-content">
+                <!-- Additional "block-strong" class for extra highlighting -->
+                <div class="block-title-large margin-top text-align-center">Nogomi Downloader</div>
+
+                <div class="block-title">Description</div>
+                <div class="card" style="border-radius: 0px; box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);">
+                    <div class="card-content card-content-padding">This app created to make your life easier,
+                        through this app you can download the entire albums from nogomistars.com easily.</div>
+                </div>
+                <div class="card" style="border-radius: 0px; box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);">
+                    <div class="card-content card-content-padding">
+                        <div class="row">
+                            <div class="col-70">
+                                <input style="width: 100%; margin-top: 5px;" type="text" id="albumUrl" placeholder="Enter album's url">
+                            </div>
+                            <div class="col-30">
+                                <button class="button button-fill color-green" id="loadAlbumButton">Load Album</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-title">Results</div>
+                <div class="list media-list margin-left margin-right" id="resultsList">
+
+                </div>
+                <p class="row">
+                    <button class="button button-fill color-green padding-bottom" id="downloadAll" style="opacity: 0; margin-bottom: 60px; margin-left: 20px; margin-right: 20px;">Download Album</button>
+                </p>
+            </div>
+            <div class="toolbar toolbar-bottom text-align-center">
+                <div style="margin-top: 10px;">© iMokhles 2020 - all rights reserved</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library Bundle JS-->
+<script type="text/javascript" src="node_modules/framework7/js/framework7.bundle.min.js"></script>
+<script type="text/javascript" src="src/App/App.js"></script>
+</body>
+</html>
