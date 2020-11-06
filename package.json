@@ -1,0 +1,67 @@
+{
+  "name": "NogomiDownlaoder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "^10.1.5",
+    "electron-builder": "^22.9.1",
+    "electron-reloader": "^1.0.1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "framework7": "^5.7.13",
+    "fs": "^0.0.1-security",
+    "request": "^2.88.2"
+  },
+  "build": {
+    "appId": "com.imokhles.nogomidownloader",
+    "mac": {
+      "category": "Utilities"
+    }
+  },
+
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "NogomiDownlaoder"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
