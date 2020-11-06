@@ -22,7 +22,9 @@ $$('#loadAlbumButton').on('click', function () {
         getPage( albumUrl, (html) => {
             let data = parsePage(html);
             if (data && data.length) {
+                $$('#resultsList').html('');
                 data.map((song) => (
+
                     $$('#resultsList').append(
                         "<ul class=\"margin-bottom\" style=\"border-radius: 0px; box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);\">\n" +
                         "                        <li>\n" +
@@ -70,6 +72,12 @@ const getPage = ( albumUrl, cb ) => {
 const parsePage = ( data ) => {
     const $ = cheerio.load(data);
     let output = [];
+
+    let albumIcon = $('.item-media-content').attr('style');
+    albumIcon = albumIcon.split('url(\'')[1]
+    albumIcon = albumIcon.split('\')')[0]
+
+    console.log("Image Icon: "+JSON.stringify(albumIcon))
     $('#tracks').find('.item.r').each( (i, elem ) => {
 
         let $itemInfo = $(elem).find('.item-info');
@@ -82,7 +90,7 @@ const parsePage = ( data ) => {
         if (title && url) {
             let datum = {
                 id: id,
-                avatar: 'https://nogomistars.com/albumlogo/assala-2020.jpg',
+                avatar: albumIcon,
                 title: title.replace(/(\r\n|\n|\r)/gm, ""),
                 site: url.split('/').pop().split('-')[0].split('_')[0],
                 artist: url.split('/').pop().split('-')[0].split('_')[1],
